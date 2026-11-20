@@ -1,0 +1,19 @@
+{
+  "name": "eventrise",
+  "displayName": "Eventrise",
+  "version": "1.0.0",
+  "description": "Run your events from Claude: create events and tickets, track sales, manage attendees and check-in, handle refunds and settle up, all through your Eventrise account.",
+  "author": {
+    "name": "Eventrise",
+    "url": "https://eventrise.com"
+  },
+  "homepage": "https://eventrise.com/docs/mcp",
+  "repository": "https://github.com/eventriseapp/claude-plugin",
+  "license": "MIT",
+  "keywords": ["events", "ticketing", "attendees", "check-in", "event management", "box office"],
+  "icon": "./icon.png",
+  "documentationUrl": "https://eventrise.com/docs/mcp",
+  "supportUrl": "https://eventrise.com/contact-us",
+  "privacyPolicyUrl": "https://eventrise.com/privacy-policy",
+  "termsOfServiceUrl": "https://eventrise.com/terms-and-conditions"
+}
