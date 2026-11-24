@@ -32,3 +32,8 @@ Follow `eventrise-basics` for the organization, money units and confirmations.
 ## Featured events
 
 The organizer's public page can feature chosen events. Use `organization_list_featured_events`, `organization_create_featured_event`, `organization_reorder_featured_events`, `organization_delete_featured_event` and `organization_update_featured_events_mode`. These change a public page, so confirm the final order before saving.
+
+- Start with `organization_list_featured_events` and read `featured_events_mode`.
+- In `automatic` mode the page shows the next upcoming events, listed in `automatic_events`. The picks in `data` are saved for later and don't show. Reordering or deleting a pick changes nothing on the page.
+- To reorder or remove what the page shows, first switch to manual with `organization_update_featured_events_mode` (`mode: "manual"`). Tell the person before you do: the page then shows the saved picks, or a copy of the automatic events when there are none. List again to get the new ids, then reorder or delete.
+- Adding an event with `organization_create_featured_event` switches an automatic page to manual on its own. Say so before you add it: the page then shows the saved picks plus the new one.
