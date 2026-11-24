@@ -22,9 +22,11 @@ Follow `eventrise-basics` for the organization, money units and confirmations. E
 
 `organization_cancel_order` voids every ticket on the order that hasn't been refunded, frees the seats and inventory, and sends one email. It refunds each ticket in full unless you pass `issue_refund: false`.
 
-1. Call it with `dry_run: true` first. That changes nothing and lists add-ons on other orders that depend on these tickets.
-2. Show the order, the tickets, the total refund and the dependent add-ons. Ask whether to include those add-ons (`include_order_item_ids`).
-3. Cancel only after a clear yes.
+1. Pick the `refund_reason` with the person first. The tool needs it on every call, the dry run included.
+2. Call it with `dry_run: true`. That changes nothing and lists only the add-ons on other orders that depend on these tickets. It returns no refund amount.
+3. For the total, open the order with `organization_get_order` and call `organization_preview_refund` for each ticket that isn't refunded yet. Add up each `total_refund_cents`.
+4. Show the order, the tickets, the total refund and the dependent add-ons. Ask whether to include those add-ons (`include_order_item_ids`).
+5. Cancel only after a clear yes.
 
 ## Locked settlements
 
