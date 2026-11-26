@@ -1,7 +1,7 @@
 {
   "name": "eventrise",
   "displayName": "Eventrise",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Run your events from Claude: create events and tickets, track sales, manage attendees and check-in, handle refunds and settle up, all through your Eventrise account.",
   "author": {
     "name": "Eventrise",

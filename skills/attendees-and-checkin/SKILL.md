@@ -35,6 +35,6 @@ These change what a buyer sees or receive emails, so confirm each one first:
 - Fix an attendee's name, contact details or question answers: `organization_checkin_attendee` (despite its name, it updates the attendee's details and checks nobody in). Order-level answers: `organization_update_order_responses`; one ticket's answers: `organization_update_order_item_responses`.
 - Give a ticket to someone else: `organization_preview_order_item_schedule_conflicts` first (it warns about overlapping sessions), then `organization_reassign_order_item`.
 - Start or cancel a transfer for the holder: `organization_create_order_item_transfer`, `organization_cancel_order_item_transfer`.
-- Comp tickets or record an order paid outside Eventrise: `organization_create_comped_order`. Ask whether attendees should get an email. Remove one with `organization_delete_comped_order`.
+- Comp tickets or record an order paid outside Eventrise: `organization_create_comped_order`. Ask whether attendees should get an email. On a seated event, every item needs a seat label: read the event's `seat_map_id`, then copy the label exactly from the `objects` keys of `organization_get_seat_map_categories`. Never guess one. Remove one with `organization_delete_comped_order`.
 
 Refunds and order cancellations live in the `refunds` skill.
